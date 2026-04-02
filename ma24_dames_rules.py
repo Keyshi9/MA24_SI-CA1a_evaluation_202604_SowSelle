@@ -221,9 +221,9 @@ def avance_gauche(posx, posy):
         if joueur % JOUEUR_BAS:
             # On joue de haut en bas
             if posy < (nb_lignes-1):
-                if posx < (nb_colonnes-1):
-                    if plateau_board[posy+1][posx+1] == 1:
-                        avance = (posx+2, posy+1)
+                if posx > 0:
+                    if plateau_board[posy+1][posx-1] == 1:
+                        avance = (posx-1, posy+1)
         else:
             # On joue de bas en haut
             if posy > 0:
@@ -249,9 +249,9 @@ def avance_droite(posx, posy):
         if joueur % JOUEUR_BAS:
             # On joue de haut en bas
             if posy < (nb_lignes-1):
-                if posx > 0:
-                    if plateau_board[posy+1][posx-1] == 1:
-                        avance = (posx-1, posy+1)
+                if posx < (nb_colonnes-1):
+                    if plateau_board[posy+1][posx+1] == 1:
+                        avance = (posx+1, posy+1)
         else:
             # On joue de bas en haut
             if posy > 0:
