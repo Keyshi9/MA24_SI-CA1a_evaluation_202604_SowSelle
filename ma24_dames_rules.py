@@ -48,8 +48,8 @@ def plateau_vide():
     global plateau_board, nb_lignes, nb_colonnes, case_paire, case_impaire
     plateau_board = [1]*nb_lignes
     for ligne in range(nb_lignes):
-        plateau_board[ligne] = [case_impaire, case_paire]*(nb_colonnes//2)\
-            if not ligne % 2 else [case_paire, case_impaire]*(nb_colonnes//2)
+        plateau_board[ligne] = [case_paire, case_impaire]*(nb_colonnes//2)\
+            if not ligne % 2 else [case_impaire, case_paire]*(nb_colonnes//2)
         if nb_colonnes % 2:
             plateau_board[ligne] += [plateau_board[ligne][0]]
 
